@@ -47,6 +47,7 @@ Podfile.lock
 plugins/glib/ios/lib
 .last_build_id
 *.apk
+*.zip
 output.json
 android/app/release
 android/app/profile
@@ -54,6 +55,6 @@ android/app/fdroid/release
 .gradle
 local.properties
 .cxx
-plugins/flutter_git/ios/include 
+plugins/flutter_git/ios/include
 plugins/flutter_git/ios/lib
 plugins/flutter_git/cpp/.vscode

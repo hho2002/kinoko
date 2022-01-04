@@ -26,6 +26,12 @@ jobs:
       - run: flutter --version
       - run: dart --version
 
+      - name: remove unused files
+        run: |
+          rm -rf ios
+          rm -rf plugins/glib/ios
+          rm -rf plugins/glib/example/ios
+
       - name: Build APK
         run: flutter build apk
 
@@ -36,7 +42,6 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: build/app/outputs/flutter-apk/app-release.apk
         env:
